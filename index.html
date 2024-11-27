@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anleggsmaskiner</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Velkommen til Anleggsmaskiner!</h1>
+    </header>
+    
+    <section class="maskiner">
+        <h2>Våre anleggsmaskiner</h2>
+        <div class="maskin-container">
+           @foreach (var maskin in Model.Maskiner)
+           {
+               <div class="maskin"></div>
+               <h3>@maskin.Navn</h3>
+               <p>@maskin.Beskrivelse</p>
+               <p><strong>Pris:</strong> @maskin.Pris NOK</p>
+           </div>
+        }
+    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Anleggsmaskiner</p>
+    </footer>
+</body>
+</html>
